@@ -1,0 +1,17 @@
+[package]
+name = "xmrvm-atomic-probe"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Verifies cross-program invocation and commit-or-revert semantics on the XMRVM runtime"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "2.1"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1

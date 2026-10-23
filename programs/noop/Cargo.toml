@@ -1,0 +1,17 @@
+[package]
+name = "xmrvm-noop"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Test fixture: an SBF program that accepts any instruction and does nothing"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "2.1"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1

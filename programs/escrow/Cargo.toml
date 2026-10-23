@@ -1,0 +1,18 @@
+[package]
+name = "xmrvm-escrow"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Buyer/seller/arbiter escrow over the XMRVM runtime's XMR unit mint"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "2.1"
+spl-token = { version = "7", features = ["no-entrypoint"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
