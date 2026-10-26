@@ -90,13 +90,6 @@ This repository documents the architecture of XMRVM. The runtime
 service, the tee image definition and the deployment automation are not published here yet.
 
 
-
-## Project status
-
-This repository is the canonical source for XMRVM's architecture and reference implementation. There
-is no public endpoint and no hosted dApp: anything presenting itself as an official XMRVM deposit
-service is not associated with this project. Follow this repository for deployment announcements.
-
 ## Contributing
 
 Issues and discussion about the design are welcome. Because the runtime is not published here yet,
