@@ -86,20 +86,8 @@ and paid back out as a native Monero transaction.
 
 ## What this repository contains
 
-This repository documents the architecture of XMRVM and publishes the dApp front-end. The runtime
-service, the enclave image definition and the deployment automation are not published here yet.
-
-| Path | Contents |
-|---|---|
-| [docs/](./docs) | Whitepaper, project description, technical specification, privacy policy and operational guides |
-
-
-## Documentation
-
-Start here:
-
-1. **[Whitepaper](./docs/xmrvm-tee-whitepaper.md)** — the architecture, threat model and rationale.
-
+This repository documents the architecture of XMRVM. The runtime
+service, the tee image definition and the deployment automation are not published here yet.
 
 
 
