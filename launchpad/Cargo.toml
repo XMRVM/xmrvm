@@ -1,0 +1,25 @@
+[package]
+name = "xmrvm-launchpad"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Token launchpad: fixed-supply tokens traded against XMR on a bonding curve, then a locked pool"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+# Private staging build: curve prices scaled to 1/100 (see INITIAL_VIRTUAL_XMR).
+staging = []
+# Separate micro-staging identity; preserves the existing staging program.
+staging-micro = []
+staging-swap = []
+
+[dependencies]
+solana-program = "2.1"
+spl-token = { version = "7", features = ["no-entrypoint"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
