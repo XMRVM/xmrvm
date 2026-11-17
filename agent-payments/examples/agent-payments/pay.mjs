@@ -23,7 +23,10 @@ if (!['http:', 'https:'].includes(endpoint.protocol) || endpoint.username || end
 async function rpc(method, params = []) {
   const response = await fetch(endpoint, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: {
+      'content-type': 'application/json',
+      origin: process.env.XMRVM_RPC_ORIGIN?.trim() || 'https://www.xmrvm.net',
+    },
     body: JSON.stringify({ jsonrpc: '2.0', id: crypto.randomUUID(), method, params }),
     cache: 'no-store',
   });
